@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Departemen Ilmu Ekonomi - Fakultas Ekonomi dan Manajemen IPB University. Pendidikan, penelitian, dan pengabdian di bidang ekonomi pembangunan, moneter, perdagangan, dan regional.">
+    <meta name="keywords" content="ilmu ekonomi ipb, departemen ekonomi ipb, ekonomi pembangunan ipb, sarjana ekonomi ipb, pascasarjana ekonomi ipb">
+    <link rel="icon" href="https://ekonomi.ipb.ac.id/wp-content/uploads/2023/04/cropped-Logo-IPB-University_Vertical-Putih-32x32.png" sizes="32x32" />
+    <title>Ilmu Ekonomi | IPB University</title>
+    <meta name="google-site-verification" content="SrTZawFSaLAONuV52vjH13dAEw3zOeO0J7W9G7wwpi8" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap');
+        
+        :root {
+            --primary: #003087;
+            --accent: #f5a623;
+        }
+        
+        body {
+            font-family: 'Roboto', system_ui, sans-serif;
+        }
+        
+        .header-top {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .navbar {
+            background: rgb(74, 109, 210);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 9999;
+        }
+        
+        .logo-img {
+            height: 78px;
+            transition: all 0.3s ease;
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.03);
+        }
+        
+        .hero {
+            height: 640px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 800ms ease;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+        
+        .menu-link {
+            position: relative;
+            font-weight: 600;
+            color: #1f2937;
+            transition: color 0.3s;
+        }
+        
+        .menu-link:hover {
+            color: var(--accent);
+        }
+        
+        .menu-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .menu-link:hover:after {
+            width: 100%;
+        }
+        
+        .dropdown {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgb(0 48 135 / 0.25);
+        }
+        
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .nav-active {
+            color: var(--accent) !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- HEADER TOP -->
+    <div class="header-top py-3 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center gap-6">
+                <a href="#" class="flex items-center gap-2 hover:text-[#f5a623]">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Jl. Raya Dramaga, Bogor 16680</span>
+                </a>
+                <a href="mailto:ilmu_ekonomi@apps.ipb.ac.id" class="flex items-center gap-2 hover:text-[#f5a623]">
+                    <i class="fas fa-envelope"></i>
+                    <span>ilmu_ekonomi@apps.ipb.ac.id</span>
+                </a>
+                <a href="tel:+622518626602" class="flex items-center gap-2 hover:text-[#f5a623]">
+                    <i class="fas fa-phone"></i>
+                    <span>+62 251-8626602</span>
+                </a>
+            </div>
+            
+            <div class="flex items-center gap-5 text-lg">
+                <a href="https://www.instagram.com/dept_ieipb/" target="_blank" class="hover:text-[#f5a623]"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCMMCQo_XiC-RiLBbsPH7OWQ/" target="_blank" class="hover:text-[#f5a623]"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank" class="hover:text-[#f5a623]"><i class="fab fa-tiktok"></i></a>
+            </div>
+            
+            <div>
+                <a href="https://simak.ipb.ac.id/" target="_blank" 
+                   class="bg-white text-[#003087] px-5 py-1.5 rounded-full text-xs font-semibold hover:bg-[#f5a623] hover:text-white transition-all">
+                    Pendaftaran Mahasiswa Baru
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="https://ekonomi.ipb.ac.id/wp-content/uploads/2023/12/Web-1-320x78.png" 
+                     alt="Departemen Ilmu Ekonomi IPB University" 
+                     class="logo-img">
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-8 text-base">
+                <a href="#" onclick="navigateToSection('hero')" class="menu-link nav-active">Beranda</a>
+                
+                <div class="relative group">
+                    <a href="#" class="menu-link flex items-center gap-1">
+                        Tentang Kami 
+                        <i class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="dropdown absolute hidden group-hover:block pt-4">
+                        <div class="bg-white shadow-2xl rounded-2xl py-6 px-8 w-72 text-sm">
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Profil Departemen</a>
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Visi, Misi &amp; Tujuan</a>
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Struktur Organisasi</a>
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Sejarah</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <a href="#" class="menu-link flex items-center gap-1">
+                        Program 
+                        <i class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="dropdown absolute hidden group-hover:block pt-4">
+                        <div class="bg-white shadow-2xl rounded-2xl py-6 px-8 w-80 text-sm">
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Sarjana Ekonomi Pembangunan (S1)</a>
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Pascasarjana Ilmu Ekonomi (S2/S3)</a>
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Kompetensi Lulusan</a>
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Daya Tampung</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative group">
+                    <a href="#" class="menu-link flex items-center gap-1">
+                        Divisi 
+                        <i class="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="dropdown absolute hidden group-hover:block pt-4">
+                        <div class="bg-white shadow-2xl rounded-2xl py-6 px-8 w-80 text-sm space-y-1">
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Ekonomi Moneter, Perbankan &amp; Keuangan</a>
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Ekonomi Perdagangan, Industri &amp; Pembangunan</a>
+                            <a href="#" class="block py-2.5 hover:text-[#f5a623]">Ekonomi Regional, Publik &amp; Kelembagaan</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" onclick="navigateToSection('news')" class="menu-link">Berita</a>
+                <a href="#" class="menu-link">Penelitian</a>
+                <a href="#" class="menu-link">Pengabdian</a>
+                <a href="#" class="menu-link">Kerja Sama</a>
+                <a href="#" onclick="navigateToSection('gallery')" class="menu-link">Galeri</a>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button onclick="toggleSearch()" 
+                        class="w-10 h-10 flex items-center justify-center text-2xl text-gray-600 hover:text-[#f5a623]">
+                    <i class="fas fa-search"></i>
+                </button>
+                
+                <button onclick="toggleMobileMenu()" 
+                        class="lg:hidden w-11 h-11 flex items-center justify-center text-3xl text-[#003087]">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t py-6">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col gap-5 text-lg">
+                <!-- Isi mobile menu sama seperti desktop -->
+                <a href="#" class="py-2">Beranda</a>
+                <a href="#" class="py-2">Tentang Kami</a>
+                <a href="#" class="py-2">Program Studi</a>
+                <a href="#" class="py-2">Divisi</a>
+                <a href="#" class="py-2">Berita</a>
+                <a href="#" class="py-2">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SLIDER DENGAN JS INTERAKTIF -->
+    <section id="hero" class="hero">
+        <!-- Slide 1 -->
+        <div id="slide-0" class="hero-slide active" 
+             style="background-image: linear-gradient(rgba(0,48,135,0.75), rgba(0,48,135,0.65)), url('https://ekonomi.ipb.ac.id/wp-content/uploads/2024/01/hero-1.jpg');">
+            <div class="max-w-7xl mx-auto px-6 h-full flex items-center relative z-10">
+                <div class="max-w-2xl text-white">
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        Departemen Ilmu Ekonomi<br>
+                        <span class="text-[#f5a623]">IPB University</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-10">Mencetak Ekonom Pembangunan Unggul Berbasis Sains dan Inovasi</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" onclick="scrollToSection('program')" 
+                           class="bg-[#f5a623] hover:bg-white hover:text-[#003087] text-black font-semibold px-9 py-4 rounded-2xl inline-flex items-center gap-3 transition-all">
+                            Lihat Program Studi <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" onclick="scrollToSection('news')" 
+                           class="border-2 border-white hover:bg-white hover:text-black text-white font-semibold px-9 py-4 rounded-2xl transition-all">
+                            Berita Terbaru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div id="slide-1" class="hero-slide" 
+             style="background-image: linear-gradient(rgba(0,48,135,0.75), rgba(0,48,135,0.65)), url('https://ekonomi.ipb.ac.id/wp-content/uploads/2025/03/berita-1.jpg');">
+            <div class="max-w-7xl mx-auto px-6 h-full flex items-center relative z-10">
+                <div class="max-w-xl text-white">
+                    <h2 class="text-5xl font-bold mb-6">Seminar Nasional Ekonomi 2026</h2>
+                    <p class="text-xl mb-8">Bergabunglah dengan pakar ekonomi nasional untuk membahas tantangan pembangunan berkelanjutan.</p>
+                    <a href="#" class="inline-flex items-center gap-3 bg-white text-[#003087] font-bold px-8 py-4 rounded-2xl">
+                        Daftar Sekarang <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="absolute bottom-12 left-1/2 flex gap-4 z-20">
+            <button onclick="prevSlide()" 
+                    class="w-12 h-12 bg-white/30 hover:bg-white/70 backdrop-blur-md text-white rounded-full flex items-center justify-center transition-all">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="nextSlide()" 
+                    class="w-12 h-12 bg-white/30 hover:bg-white/70 backdrop-blur-md text-white rounded-full flex items-center justify-center transition-all">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Slide Indicators -->
+        <div class="absolute bottom-12 right-12 flex gap-3 z-20">
+            <button onclick="goToSlide(0)" id="dot-0" class="w-4 h-4 rounded-full bg-white"></button>
+            <button onclick="goToSlide(1)" id="dot-1" class="w-4 h-4 rounded-full bg-white/50 hover:bg-white"></button>
+        </div>
+    </section>
+
+    <!-- STATISTIK INTERAKTIF -->
+    <div class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div id="stat-lecturers" class="stat-number text-6xl font-bold text-[#003087]">30</div>
+                    <div class="mt-2 text-gray-600 font-medium">Dosen</div>
+                </div>
+                <div>
+                    <div id="stat-students" class="stat-number text-6xl font-bold text-[#003087]">460</div>
+                    <div class="mt-2 text-gray-600 font-medium">Mahasiswa Aktif</div>
+                </div>
+                <div>
+                    <div id="stat-alumni" class="stat-number text-6xl font-bold text-[#003087]">2044</div>
+                    <div class="mt-2 text-gray-600 font-medium">Alumni</div>
+                </div>
+                <div>
+                    <div id="stat-research" class="stat-number text-6xl font-bold text-[#003087]">120</div>
+                    <div class="mt-2 text-gray-600 font-medium">Penelitian Terbit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAM STUDI -->
+    <section id="program" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-[#003087] mb-4">Program Studi</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-md mx-auto">Pilih jalur pendidikan sesuai minat dan tujuan karir Anda</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card S1 -->
+                <div class="card bg-white rounded-3xl overflow-hidden shadow">
+                    <div class="h-2 bg-[#f5a623]"></div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-[#003087] text-white rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-user-graduate text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Sarjana Ekonomi Pembangunan (S1)</h3>
+                        <p class="text-gray-600 mb-8">Program unggulan dengan akreditasi A. Fokus pada ekonomi pertanian, pembangunan, dan keberlanjutan.</p>
+                        <button onclick="alert('Detail Sarjana akan dibuka di halaman terpisah (demo)')" 
+                                class="text-[#f5a623] font-semibold flex items-center gap-2 group">
+                            Pelajari Lebih Lanjut 
+                            <span class="group-hover:translate-x-1 transition">→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card Pascasarjana -->
+                <div class="card bg-white rounded-3xl overflow-hidden shadow">
+                    <div class="h-2 bg-[#003087]"></div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-[#f5a623] text-white rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-graduation-cap text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Pascasarjana Ilmu Ekonomi</h3>
+                        <p class="text-gray-600 mb-8">Program Magister dan Doktor dengan pendekatan riset mendalam dan kerja sama internasional.</p>
+                        <button onclick="alert('Detail Pascasarjana akan dibuka (demo)')" 
+                                class="text-[#f5a623] font-semibold flex items-center gap-2 group">
+                            Pelajari Lebih Lanjut 
+                            <span class="group-hover:translate-x-1 transition">→</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card Divisi -->
+                <div class="card bg-white rounded-3xl overflow-hidden shadow">
+                    <div class="h-2 bg-green-600"></div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-green-600 text-white rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fas fa-chart-line text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">Tiga Divisi Unggulan</h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li class="flex gap-3"><i class="fas fa-check text-green-600"></i> Moneter, Perbankan &amp; Keuangan</li>
+                            <li class="flex gap-3"><i class="fas fa-check text-green-600"></i> Perdagangan &amp; Industri</li>
+                            <li class="flex gap-3"><i class="fas fa-check text-green-600"></i> Regional &amp; Kelembagaan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BERITA TERBARU DENGAN FILTER -->
+    <section id="news" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-[#003087]">Berita &amp; Kegiatan Terbaru</h2>
+                    <p class="text-gray-600 mt-2">Update terkini dari Departemen Ilmu Ekonomi IPB</p>
+                </div>
+                <div class="flex gap-3 mt-6 md:mt-0">
+                    <button onclick="filterNews('all')" id="filter-all" 
+                            class="active-filter px-5 py-2 rounded-full border text-sm font-medium">Semua</button>
+                    <button onclick="filterNews('event')" id="filter-event"
+                            class="px-5 py-2 rounded-full border text-sm font-medium">Kegiatan</button>
+                    <button onclick="filterNews('research')" id="filter-research"
+                            class="px-5 py-2 rounded-full border text-sm font-medium">Penelitian</button>
+                </div>
+            </div>
+            
+            <div id="news-container" class="grid md:grid-cols-3 gap-8">
+                <!-- News cards akan di-generate oleh JS -->
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="alert('Semua berita akan ditampilkan di halaman arsip (demo)')" 
+                        class="border-2 border-[#003087] text-[#003087] hover:bg-[#003087] hover:text-white px-10 py-4 rounded-2xl font-semibold transition-all">
+                    Lihat Semua Berita →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#003087] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-y-12">
+                <div class="md:col-span-5">
+                    <img src="https://ekonomi.ipb.ac.id/wp-content/uploads/2023/12/Web-1-320x78.png" 
+                         alt="Logo" class="h-16 mb-8">
+                    <p class="max-w-sm text-white/80">Departemen Ilmu Ekonomi Fakultas Ekonomi dan Manajemen IPB University berkomitmen menghasilkan lulusan berkualitas dan berkontribusi bagi pembangunan bangsa.</p>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <h6 class="uppercase tracking-widest text-xs mb-6 text-[#f5a623]">Navigasi Cepat</h6>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-[#f5a623]">Profil</a></li>
+                        <li><a href="#" class="hover:text-[#f5a623]">Program Studi</a></li>
+                        <li><a href="#" class="hover:text-[#f5a623]">Divisi Penelitian</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-2">
+                    <h6 class="uppercase tracking-widest text-xs mb-6 text-[#f5a623]">Kontak</h6>
+                    <div class="space-y-4 text-sm">
+                        <p>Jl. Raya Dramaga, Kampus IPB Dramaga<br>Bogor 16680, Jawa Barat</p>
+                        <p>Telp: +62 251-8626602</p>
+                        <p>Email: ilmu_ekonomi@apps.ipb.ac.id</p>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-3">
+                    <h6 class="uppercase tracking-widest text-xs mb-6 text-[#f5a623]">Ikuti Kami</h6>
+                    <div class="flex gap-6 text-3xl">
+                        <a href="https://www.instagram.com/dept_ieipb/" target="_blank" class="hover:text-[#f5a623]">IG</a>
+                        <a href="https://www.youtube.com/channel/UCMMCQo_XiC-RiLBbsPH7OWQ/" target="_blank" class="hover:text-[#f5a623]">YT</a>
+                        <a href="#" class="hover:text-[#f5a623]">TT</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-16 pt-8 text-center text-xs text-white/60">
+                © 2026 Departemen Ilmu Ekonomi IPB University • Dibuat dengan dedikasi untuk pendidikan tinggi Indonesia
+            </div>
+        </div>
+    </footer>
+
+    <!-- SEARCH MODAL -->
+    <div id="search-modal" class="hidden fixed inset-0 bg-black/70 flex items-start justify-center pt-32 z-[99999]">
+        <div class="bg-white w-full max-w-2xl mx-4 rounded-3xl shadow-2xl">
+            <div class="p-6 border-b flex items-center gap-4">
+                <input id="search-input" type="text" placeholder="Cari berita, program, atau dosen..." 
+                       class="flex-1 outline-none text-lg">
+                <button onclick="toggleSearch()" class="text-3xl text-gray-400 hover:text-black">✕</button>
+            </div>
+            <div class="p-8 text-sm text-gray-500">
+                Ketik kata kunci dan tekan Enter...<br>
+                <span class="text-xs">(Fitur pencarian interaktif siap diintegrasikan dengan backend)</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ================== TAILWIND INIT ==================
+        function initTailwind() {
+            // Dummy config
+        }
+        
+        // ================== HERO SLIDER ==================
+        let currentSlideIndex = 0;
+        const totalSlides = 2;
+        
+        function showSlide(index) {
+            for (let i = 0; i < totalSlides; i++) {
+                const slide = document.getElementById(`slide-${i}`);
+                const dot = document.getElementById(`dot-${i}`);
+                if (slide && dot) {
+                    slide.classList.remove('active');
+                    dot.classList.remove('bg-white');
+                    dot.classList.add('bg-white/50');
+                }
+            }
+            
+            const activeSlide = document.getElementById(`slide-${index}`);
+            const activeDot = document.getElementById(`dot-${index}`);
+            
+            if (activeSlide) activeSlide.classList.add('active');
+            if (activeDot) {
+                activeDot.classList.add('bg-white');
+                activeDot.classList.remove('bg-white/50');
+            }
+            
+            currentSlideIndex = index;
+        }
+        
+        function nextSlide() {
+            let next = currentSlideIndex + 1;
+            if (next >= totalSlides) next = 0;
+            showSlide(next);
+        }
+        
+        function prevSlide() {
+            let prev = currentSlideIndex - 1;
+            if (prev < 0) prev = totalSlides - 1;
+            showSlide(prev);
+        }
+        
+        function goToSlide(index) {
+            showSlide(index);
+        }
+        
+        // Auto slide setiap 6 detik
+        let autoSlideInterval;
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                nextSlide();
+            }, 6000);
+        }
+        
+        // ================== COUNTER ANIMATION ==================
+        function animateCounter(id, target, duration = 2000) {
+            const element = document.getElementById(id);
+            if (!element) return;
+            
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+        
+        function runCounters() {
+            animateCounter('stat-lecturers', 30);
+            animateCounter('stat-students', 460);
+            animateCounter('stat-alumni', 2044);
+            animateCounter('stat-research', 120);
+        }
+        
+        // ================== NEWS DATA & RENDER ==================
+        const newsData = [
+            {
+                id: 1,
+                title: "Seminar Nasional Ekonomi Pembangunan 2026",
+                date: "31 Maret 2026",
+                category: "event",
+                image: "https://ekonomi.ipb.ac.id/wp-content/uploads/2025/03/berita-1.jpg",
+                excerpt: "Lebih dari 400 peserta hadir dalam seminar yang membahas strategi pemulihan ekonomi pasca-pandemi."
+            },
+            {
+                id: 2,
+                title: "Penelitian Dosen Raih Hibah Kompetitif Kemdikbud",
+                date: "12 Maret 2026",
+                category: "research",
+                image: "https://ekonomi.ipb.ac.id/wp-content/uploads/2025/02/berita-2.jpg",
+                excerpt: "Tim dosen Departemen Ilmu Ekonomi berhasil mendapatkan dana riset nasional sebesar Rp 450 juta."
+            },
+            {
+                id: 3,
+                title: "Wisuda Perdana 68 Lulusan S1 & S2",
+                date: "19 Februari 2026",
+                category: "event",
+                image: "https://ekonomi.ipb.ac.id/wp-content/uploads/2025/01/berita-3.jpg",
+                excerpt: "IPB University kembali melepas lulusan terbaik dari Departemen Ilmu Ekonomi dengan predikat cum laude."
+            }
+        ];
+        
+        function renderNews(filteredNews = newsData) {
+            const container = document.getElementById('news-container');
+            container.innerHTML = '';
+            
+            filteredNews.forEach(news => {
+                const cardHTML = `
+                    <div class="card bg-white rounded-3xl overflow-hidden border border-gray-100">
+                        <img src="${news.image}" alt="${news.title}" 
+                             class="w-full h-56 object-cover">
+                        <div class="p-7">
+                            <div class="flex items-center gap-3 text-xs">
+                                <span class="bg-[#f5a623] text-white px-3 py-1 rounded-full">${news.date}</span>
+                                <span class="uppercase tracking-widest text-gray-400">${news.category}</span>
+                            </div>
+                            <h4 class="font-semibold text-xl mt-5 leading-tight">${news.title}</h4>
+                            <p class="text-gray-600 mt-4 line-clamp-3">${news.excerpt}</p>
+                            <button onclick="readNews(${news.id})" 
+                                    class="mt-6 text-[#003087] font-medium flex items-center gap-2 hover:gap-3 transition-all">
+                                Baca Selengkapnya <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += cardHTML;
+            });
+        }
+        
+        function filterNews(category) {
+            // Reset active class
+            document.querySelectorAll('#news button').forEach(btn => {
+                btn.classList.remove('active-filter', 'border-[#003087]', 'text-[#003087]');
+            });
+            
+            if (category === 'all') {
+                document.getElementById('filter-all').classList.add('active-filter', 'border-[#003087]', 'text-[#003087]');
+                renderNews(newsData);
+            } else {
+                const filtered = newsData.filter(n => n.category === category);
+                document.getElementById(`filter-${category}`).classList.add('active-filter', 'border-[#003087]', 'text-[#003087]');
+                renderNews(filtered);
+            }
+        }
+        
+        function readNews(id) {
+            alert(`Membuka berita ID ${id} (demo). Di versi production akan redirect ke halaman detail berita.`);
+        }
+        
+        // ================== MOBILE MENU ==================
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // ================== SEARCH MODAL ==================
+        function toggleSearch() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.toggle('hidden');
+            
+            if (!modal.classList.contains('hidden')) {
+                setTimeout(() => {
+                    document.getElementById('search-input').focus();
+                }, 300);
+            }
+        }
+        
+        // Close modal when pressing ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") {
+                const modal = document.getElementById('search-modal');
+                if (!modal.classList.contains('hidden')) modal.classList.add('hidden');
+            }
+        });
+        
+        // ================== SMOOTH SCROLL ==================
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        }
+        
+        function navigateToSection(section) {
+            if (section === 'hero') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (section === 'news') {
+                scrollToSection('news');
+            } else if (section === 'gallery') {
+                alert('Galeri akan ditampilkan (demo)');
+            }
+        }
+        
+        // ================== INIT ALL JAVASCRIPT ==================
+        function initializeAll() {
+            // Tailwind ready
+            initTailwind();
+            
+            // Hero slider
+            showSlide(0);
+            startAutoSlide();
+            
+            // Render news
+            renderNews();
+            
+            // Run counter when scrolled into view (simple version)
+            setTimeout(() => {
+                runCounters();
+            }, 1200);
+            
+            // Keyboard support for slider
+            document.addEventListener('keydown', (e) => {
+                if (e.key === "ArrowRight") nextSlide();
+                if (e.key === "ArrowLeft") prevSlide();
+            });
+            
+            console.log('%c✅ JavaScript interaktif lengkap telah diaktifkan!\nHero slider otomatis • Counter animasi • Filter berita • Modal search • Smooth navigation', 
+                        'background:#003087; color:#f5a623; padding:8px 12px; border-radius:6px; font-family:monospace');
+        }
+        
+        // Load everything when page is ready
+        window.onload = initializeAll;
+    </script>
+</body>
+</html>
